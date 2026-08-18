@@ -10,7 +10,8 @@
     "extra": "",
     "original_gravity": "1.042",
     "final_gravity": "1.010",
-    "alcohol": "4.30%"
+    "alcohol": "4.30%",
+    "dextrose": "800g Dextrose"
   },
   {
     "name": "Stout",
@@ -23,7 +24,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.046",
     "final_gravity": "1.009",
-    "alcohol": "4.40%"
+    "alcohol": "4.40%",
+    "dextrose": null
   },
   {
     "name": "Weizen Weiss Wheat Lager",
@@ -36,7 +38,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.008",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1500g Dextrose"
   },
   {
     "name": "Ginger Beer",
@@ -49,7 +52,8 @@
     "extra": "Watch temperature, don't burn",
     "original_gravity": "1.044",
     "final_gravity": "0.997",
-    "alcohol": "5.78%"
+    "alcohol": "5.78%",
+    "dextrose": "2500g Dextrose"
   },
   {
     "name": "Apple Cider",
@@ -62,7 +66,8 @@
     "extra": "Watch temperature, don't burn",
     "original_gravity": "1.044",
     "final_gravity": "1.010",
-    "alcohol": "4.46%"
+    "alcohol": "4.46%",
+    "dextrose": "2200g Dextrose"
   },
   {
     "name": "Ginger Cider",
@@ -75,7 +80,8 @@
     "extra": "",
     "original_gravity": "1.039",
     "final_gravity": "0.997",
-    "alcohol": "5.25%"
+    "alcohol": "5.25%",
+    "dextrose": null
   },
   {
     "name": "Groot",
@@ -88,7 +94,8 @@
     "extra": "Add 100ml ginger boost at filter",
     "original_gravity": "1.052",
     "final_gravity": "0.997",
-    "alcohol": "6.83%"
+    "alcohol": "6.83%",
+    "dextrose": "2800g Dextrose"
   },
   {
     "name": "KilKenny",
@@ -101,7 +108,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1900g Dextrose"
   },
   {
     "name": "Golden Ale",
@@ -114,7 +122,8 @@
     "extra": "1ml LCE",
     "original_gravity": "1.047",
     "final_gravity": "1.010",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "800g Dextrose"
   },
   {
     "name": "Hop Dog",
@@ -127,7 +136,8 @@
     "extra": "",
     "original_gravity": "1.049",
     "final_gravity": "1.012",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1800g Dextrose"
   },
   {
     "name": "Single Fin",
@@ -140,7 +150,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.042",
     "final_gravity": "1.000",
-    "alcohol": "5.51%"
+    "alcohol": "5.51%",
+    "dextrose": "1700g Dextrose"
   },
   {
     "name": "Biggie Juice",
@@ -153,7 +164,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.73%"
+    "alcohol": "4.73%",
+    "dextrose": "1500g Dextrose"
   },
   {
     "name": "Little Animals Pale Ale (LAPA)",
@@ -166,7 +178,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.009",
-    "alcohol": "4.70%"
+    "alcohol": "4.70%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Joondie Kolsch",
@@ -179,7 +192,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.009",
-    "alcohol": "4.50%"
+    "alcohol": "4.50%",
+    "dextrose": "1000g Dextrose"
   },
   {
     "name": "Copper XPA",
@@ -192,7 +206,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.009",
-    "alcohol": "4.50%"
+    "alcohol": "4.50%",
+    "dextrose": "1000g Dextrose"
   },
   {
     "name": "Rogers Lager",
@@ -205,7 +220,8 @@
     "extra": "",
     "original_gravity": "1.041",
     "final_gravity": "1.009",
-    "alcohol": "4.50%"
+    "alcohol": "4.50%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Kumquat Lager",
@@ -218,7 +234,8 @@
     "extra": "",
     "original_gravity": "1.0745",
     "final_gravity": "1.01075",
-    "alcohol": "3.49%"
+    "alcohol": "3.49%",
+    "dextrose": "1400g Dextrose"
   },
   {
     "name": "Grapefruit Pale Ale",
@@ -231,7 +248,8 @@
     "extra": "Add 2 plastic cups of grapefruit juice",
     "original_gravity": "1.043",
     "final_gravity": "1.008",
-    "alcohol": "4.60%"
+    "alcohol": "4.60%",
+    "dextrose": null
   },
   {
     "name": "Hazy P.A",
@@ -244,7 +262,8 @@
     "extra": "Run oats through mill 4x. Dry hop: 50g Centennial, 25g Galaxy, 6g Cluster",
     "original_gravity": "1.049",
     "final_gravity": "1.007",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1300g Dextrose"
   },
   {
     "name": "Great Western Mid",
@@ -257,7 +276,8 @@
     "extra": "",
     "original_gravity": "1.039",
     "final_gravity": "1.009",
-    "alcohol": "4.00%"
+    "alcohol": "4.00%",
+    "dextrose": "2200g Dextrose"
   },
   {
     "name": "Peroni",
@@ -270,7 +290,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.046",
     "final_gravity": "1.009",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "400g Dextrose"
   },
   {
     "name": "St Louis Lager",
@@ -283,7 +304,8 @@
     "extra": "",
     "original_gravity": "1.041",
     "final_gravity": "1.009",
-    "alcohol": "4.30%"
+    "alcohol": "4.30%",
+    "dextrose": "800g Dextrose"
   },
   {
     "name": "Colorado Lager",
@@ -296,7 +318,8 @@
     "extra": "",
     "original_gravity": "1.046",
     "final_gravity": "1.010",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "800g Dextrose"
   },
   {
     "name": "VB Lite",
@@ -309,7 +332,8 @@
     "extra": "2.5ml LCE",
     "original_gravity": "1.023",
     "final_gravity": "1.001",
-    "alcohol": "2.89%"
+    "alcohol": "2.89%",
+    "dextrose": "1450g Dextrose"
   },
   {
     "name": "VB Lite Mid LC",
@@ -322,7 +346,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.013",
     "final_gravity": "1.001",
-    "alcohol": "2.10%"
+    "alcohol": "2.10%",
+    "dextrose": null
   },
   {
     "name": "MCGVB",
@@ -335,7 +360,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.008",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "2200g Dextrose"
   },
   {
     "name": "Aussie Draught",
@@ -348,7 +374,8 @@
     "extra": "",
     "original_gravity": "1.046",
     "final_gravity": "1.009",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "1250g Dextrose"
   },
   {
     "name": "Swan AU",
@@ -361,7 +388,8 @@
     "extra": "",
     "original_gravity": "1.033",
     "final_gravity": "1.007",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": "700g Dextrose"
   },
   {
     "name": "Danish Lager",
@@ -374,7 +402,8 @@
     "extra": "",
     "original_gravity": "1.046",
     "final_gravity": "1.010",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1600g Dextrose"
   },
   {
     "name": "Grolsch",
@@ -387,7 +416,8 @@
     "extra": "",
     "original_gravity": "1.044",
     "final_gravity": "1.009",
-    "alcohol": "4.70%"
+    "alcohol": "4.70%",
+    "dextrose": "750g Dextrose"
   },
   {
     "name": "Hynek Dutch Pilsner",
@@ -400,7 +430,8 @@
     "extra": "",
     "original_gravity": "1.046",
     "final_gravity": "1.009",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "1100g Dextrose"
   },
   {
     "name": "Mexi Lager",
@@ -413,7 +444,8 @@
     "extra": "",
     "original_gravity": "1.045",
     "final_gravity": "1.010",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "1000g Dextrose"
   },
   {
     "name": "Stynl Lager",
@@ -426,7 +458,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "600g Dextrose"
   },
   {
     "name": "Tokyo Gold",
@@ -439,7 +472,8 @@
     "extra": "",
     "original_gravity": "1.040",
     "final_gravity": "1.008",
-    "alcohol": "4.30%"
+    "alcohol": "4.30%",
+    "dextrose": "1500g Dextrose"
   },
   {
     "name": "Runningbird Bitter",
@@ -452,7 +486,8 @@
     "extra": "",
     "original_gravity": "1.043",
     "final_gravity": "1.010",
-    "alcohol": "4.40%"
+    "alcohol": "4.40%",
+    "dextrose": "1800g Dextrose"
   },
   {
     "name": "Bushchook",
@@ -465,7 +500,8 @@
     "extra": "",
     "original_gravity": "1.045",
     "final_gravity": "1.009",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1900g Dextrose"
   },
   {
     "name": "Bushchook Mid",
@@ -478,7 +514,8 @@
     "extra": "",
     "original_gravity": "1.035",
     "final_gravity": "1.0075",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": null
   },
   {
     "name": "Stellar Lager",
@@ -491,7 +528,8 @@
     "extra": "",
     "original_gravity": "1.045",
     "final_gravity": "1.008",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "1400g Dextrose"
   },
   {
     "name": "Labbat Pils LC",
@@ -504,7 +542,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.010",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "1900g Dextrose"
   },
   {
     "name": "Malaga Mid",
@@ -517,7 +556,8 @@
     "extra": "",
     "original_gravity": "1.035",
     "final_gravity": "1.011",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": null
   },
   {
     "name": "Teds",
@@ -530,7 +570,8 @@
     "extra": "",
     "original_gravity": "1.035",
     "final_gravity": "0.998",
-    "alcohol": "4.59%"
+    "alcohol": "4.59%",
+    "dextrose": "1200g Dextrose"
   },
   {
     "name": "Munich Lager",
@@ -543,7 +584,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Stella Mid",
@@ -556,7 +598,8 @@
     "extra": "",
     "original_gravity": "1.039",
     "final_gravity": "1.009",
-    "alcohol": "4.00%"
+    "alcohol": "4.00%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Swany",
@@ -569,7 +612,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1500g Dextrose"
   },
   {
     "name": "Four Ages Gold",
@@ -582,7 +626,8 @@
     "extra": "",
     "original_gravity": "1.034",
     "final_gravity": "1.008",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "WSTPLC Weihenstephan Pilsner LC",
@@ -595,7 +640,8 @@
     "extra": "",
     "original_gravity": "1.038",
     "final_gravity": "1.001",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": "1000g Dextrose"
   },
   {
     "name": "Hogesgarden Wheat Lager",
@@ -608,7 +654,8 @@
     "extra": "",
     "original_gravity": "1.048",
     "final_gravity": "1.012",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "400g Dextrose"
   },
   {
     "name": "mills chill",
@@ -621,7 +668,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.040",
     "final_gravity": "1.010",
-    "alcohol": "4.00%"
+    "alcohol": "4.00%",
+    "dextrose": null
   },
   {
     "name": "Great Northern Full",
@@ -634,7 +682,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.011",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "1600g Dextrose"
   },
   {
     "name": "Kings",
@@ -647,7 +696,8 @@
     "extra": "",
     "original_gravity": "1.043",
     "final_gravity": "1.012",
-    "alcohol": "4.00%"
+    "alcohol": "4.00%",
+    "dextrose": null
   },
   {
     "name": "Toy Draft Lite LC",
@@ -660,7 +710,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.020",
     "final_gravity": "1.002",
-    "alcohol": "2.35%"
+    "alcohol": "2.35%",
+    "dextrose": null
   },
   {
     "name": "Millers",
@@ -673,7 +724,8 @@
     "extra": "",
     "original_gravity": "1.047",
     "final_gravity": "1.010",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "600g Dextrose"
   },
   {
     "name": "Mango Lager",
@@ -686,7 +738,8 @@
     "extra": "",
     "original_gravity": "1.038",
     "final_gravity": "1.001",
-    "alcohol": "5.15%"
+    "alcohol": "5.15%",
+    "dextrose": "520g Dextrose"
   },
   {
     "name": "Pretty Blonde",
@@ -699,7 +752,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.038",
     "final_gravity": "1.001",
-    "alcohol": "4.80%"
+    "alcohol": "4.80%",
+    "dextrose": null
   },
   {
     "name": "Hahn Super Dry",
@@ -712,7 +766,8 @@
     "extra": "10ml LCE",
     "original_gravity": "1.033",
     "final_gravity": "1.002",
-    "alcohol": "4.70%"
+    "alcohol": "4.70%",
+    "dextrose": null
   },
   {
     "name": "Crikey Mid",
@@ -725,7 +780,8 @@
     "extra": "",
     "original_gravity": "1.030",
     "final_gravity": "1.013",
-    "alcohol": "2.50%"
+    "alcohol": "2.50%",
+    "dextrose": null
   },
   {
     "name": "Blanc",
@@ -738,7 +794,8 @@
     "extra": "Crush full bag of Brewmart coriander seeds in mortar and pestle. Add green bowl between white and clear bowl when 6 minute timer goes off. Add 2L apricot nectar to fermenter.",
     "original_gravity": "1.049",
     "final_gravity": "1.0105",
-    "alcohol": "6.80%"
+    "alcohol": "6.80%",
+    "dextrose": "3400g Dextrose"
   },
   {
     "name": "Kirin Megumi",
@@ -751,7 +808,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.034",
     "final_gravity": "0.998",
-    "alcohol": "4.46%"
+    "alcohol": "4.46%",
+    "dextrose": "2900g Dextrose"
   },
   {
     "name": "Lefe Blonde",
@@ -764,7 +822,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.047",
     "final_gravity": "1.010",
-    "alcohol": "5.00%"
+    "alcohol": "5.00%",
+    "dextrose": "6100g Dextrose"
   },
   {
     "name": "Pretty Mid",
@@ -777,7 +836,8 @@
     "extra": "5ml LCE",
     "original_gravity": "1.036",
     "final_gravity": "1.000",
-    "alcohol": "4.70%"
+    "alcohol": "4.70%",
+    "dextrose": null
   },
   {
     "name": "BC Mid",
@@ -790,7 +850,8 @@
     "extra": "",
     "original_gravity": "1.026",
     "final_gravity": "1.0025",
-    "alcohol": "3.70%"
+    "alcohol": "3.70%",
+    "dextrose": null
   },
   {
     "name": "HSD Mid",
@@ -803,7 +864,8 @@
     "extra": "",
     "original_gravity": "1.026",
     "final_gravity": "1.0025",
-    "alcohol": "3.70%"
+    "alcohol": "3.70%",
+    "dextrose": null
   },
   {
     "name": "Blonde Mid",
@@ -816,7 +878,8 @@
     "extra": "",
     "original_gravity": "1.028",
     "final_gravity": "1.005",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": "1400g Dextrose"
   },
   {
     "name": "Crunch Full",
@@ -829,7 +892,8 @@
     "extra": "Add low carb",
     "original_gravity": "1.036",
     "final_gravity": "1.000",
-    "alcohol": "4.67%"
+    "alcohol": "4.67%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Hodes Ice Lite",
@@ -842,7 +906,8 @@
     "extra": "",
     "original_gravity": "1.029",
     "final_gravity": "1.006",
-    "alcohol": "3.00%"
+    "alcohol": "3.00%",
+    "dextrose": "350g Dextrose"
   },
   {
     "name": "Sherbert Sour",
@@ -855,7 +920,8 @@
     "extra": "",
     "original_gravity": "1.055",
     "final_gravity": "1.088",
-    "alcohol": "6.17%"
+    "alcohol": "6.17%",
+    "dextrose": null
   },
   {
     "name": "Golden Goose Light",
@@ -868,7 +934,8 @@
     "extra": "",
     "original_gravity": "1.033",
     "final_gravity": "1.007",
-    "alcohol": "3.50%"
+    "alcohol": "3.50%",
+    "dextrose": "700g Dextrose"
   },
   {
     "name": "Crunch LC",
@@ -881,7 +948,8 @@
     "extra": "10ml LCE",
     "original_gravity": "1.030",
     "final_gravity": "0.997",
-    "alcohol": "3.80%"
+    "alcohol": "3.80%",
+    "dextrose": "500g Dextrose"
   },
   {
     "name": "Japanese SuperDry",
@@ -894,7 +962,8 @@
     "extra": "",
     "original_gravity": "1.045",
     "final_gravity": "1.008",
-    "alcohol": "4.90%"
+    "alcohol": "4.90%",
+    "dextrose": "1600g Dextrose"
   },
   {
     "name": "Japanese SuperDry LC",
@@ -907,6 +976,7 @@
     "extra": "10ml LCE",
     "original_gravity": "",
     "final_gravity": "",
-    "alcohol": ""
+    "alcohol": "",
+    "dextrose": null
   }
 ]
