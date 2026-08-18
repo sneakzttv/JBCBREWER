@@ -1140,7 +1140,13 @@ select:focus {
     line-height: 1.55;
 }
 
+.dextrose-stat {
+    border-left: 3px solid #d6a84f;
+}
 
+.dextrose-stat strong {
+    color: #d6a84f;
+}
 
 /* ==========================================================
    LOGIN
