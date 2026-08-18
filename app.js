@@ -533,6 +533,10 @@ function showRecipe(
     }
 
 
+    /* =================================================
+       BASIC RECIPE INFORMATION
+    ================================================== */
+
     document.getElementById(
         "recipe-title"
     ).textContent =
@@ -562,6 +566,30 @@ function showRecipe(
     ).textContent =
         recipe.alcohol || "N/A";
 
+
+    /* =================================================
+       DEXTROSE
+    ================================================== */
+
+    document.getElementById(
+        "recipe-dextrose"
+    ).textContent =
+        recipe.dextrose || "N/A";
+
+
+    /* =================================================
+       MALTODEXTRIN
+    ================================================== */
+
+    document.getElementById(
+        "recipe-maltodextrin"
+    ).textContent =
+        recipe.maltodextrin || "N/A";
+
+
+    /* =================================================
+       RECIPE DETAILS
+    ================================================== */
 
     document.getElementById(
         "recipe-fermentables"
