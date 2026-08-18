@@ -11,7 +11,8 @@
     "original_gravity": "1.042",
     "final_gravity": "1.010",
     "alcohol": "4.30%",
-    "dextrose": "800g Dextrose"
+    "dextrose": "800g",
+    "maltodextrin": "500g"
   },
   {
     "name": "Stout",
@@ -25,7 +26,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.009",
     "alcohol": "4.40%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Weizen Weiss Wheat Lager",
@@ -39,7 +41,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.008",
     "alcohol": "4.80%",
-    "dextrose": "1500g Dextrose"
+    "dextrose": "1500g",
+    "maltodextrin": null
   },
   {
     "name": "Ginger Beer",
@@ -53,7 +56,8 @@
     "original_gravity": "1.044",
     "final_gravity": "0.997",
     "alcohol": "5.78%",
-    "dextrose": "2500g Dextrose"
+    "dextrose": "2500g",
+    "maltodextrin": "1000g"
   },
   {
     "name": "Apple Cider",
@@ -67,7 +71,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.010",
     "alcohol": "4.46%",
-    "dextrose": "2200g Dextrose"
+    "dextrose": "2200g",
+    "maltodextrin": "800g"
   },
   {
     "name": "Ginger Cider",
@@ -81,7 +86,8 @@
     "original_gravity": "1.039",
     "final_gravity": "0.997",
     "alcohol": "5.25%",
-    "dextrose": null
+    "dextrose": "2350g",
+    "maltodextrin": null
   },
   {
     "name": "Groot",
@@ -95,7 +101,8 @@
     "original_gravity": "1.052",
     "final_gravity": "0.997",
     "alcohol": "6.83%",
-    "dextrose": "2800g Dextrose"
+    "dextrose": "2800g",
+    "maltodextrin": "666g"
   },
   {
     "name": "KilKenny",
@@ -109,7 +116,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.80%",
-    "dextrose": "1900g Dextrose"
+    "dextrose": "1900g",
+    "maltodextrin": null
   },
   {
     "name": "Golden Ale",
@@ -123,7 +131,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.010",
     "alcohol": "4.90%",
-    "dextrose": "800g Dextrose"
+    "dextrose": "800g",
+    "maltodextrin": null
   },
   {
     "name": "Hop Dog",
@@ -137,7 +146,8 @@
     "original_gravity": "1.049",
     "final_gravity": "1.012",
     "alcohol": "4.80%",
-    "dextrose": "1800g Dextrose"
+    "dextrose": "1800g",
+    "maltodextrin": null
   },
   {
     "name": "Single Fin",
@@ -151,7 +161,8 @@
     "original_gravity": "1.042",
     "final_gravity": "1.000",
     "alcohol": "5.51%",
-    "dextrose": "1700g Dextrose"
+    "dextrose": "1700g",
+    "maltodextrin": null
   },
   {
     "name": "Biggie Juice",
@@ -165,7 +176,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.73%",
-    "dextrose": "1500g Dextrose"
+    "dextrose": "1500g",
+    "maltodextrin": null
   },
   {
     "name": "Little Animals Pale Ale (LAPA)",
@@ -179,7 +191,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.009",
     "alcohol": "4.70%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Joondie Kolsch",
@@ -193,7 +206,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.009",
     "alcohol": "4.50%",
-    "dextrose": "1000g Dextrose"
+    "dextrose": "1000g",
+    "maltodextrin": null
   },
   {
     "name": "Copper XPA",
@@ -207,7 +221,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.009",
     "alcohol": "4.50%",
-    "dextrose": "1000g Dextrose"
+    "dextrose": "1000g",
+    "maltodextrin": null
   },
   {
     "name": "Rogers Lager",
@@ -221,7 +236,8 @@
     "original_gravity": "1.041",
     "final_gravity": "1.009",
     "alcohol": "4.50%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Kumquat Lager",
@@ -235,7 +251,8 @@
     "original_gravity": "1.0745",
     "final_gravity": "1.01075",
     "alcohol": "3.49%",
-    "dextrose": "1400g Dextrose"
+    "dextrose": "1400g",
+    "maltodextrin": null
   },
   {
     "name": "Grapefruit Pale Ale",
@@ -263,7 +280,8 @@
     "original_gravity": "1.049",
     "final_gravity": "1.007",
     "alcohol": "4.80%",
-    "dextrose": "1300g Dextrose"
+    "dextrose": "1300g",
+    "maltodextrin": "500g"
   },
   {
     "name": "Great Western Mid",
@@ -277,7 +295,8 @@
     "original_gravity": "1.039",
     "final_gravity": "1.009",
     "alcohol": "4.00%",
-    "dextrose": "2200g Dextrose"
+    "dextrose": "2200g",
+    "maltodextrin": null
   },
   {
     "name": "Peroni",
@@ -291,7 +310,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.009",
     "alcohol": "5.00%",
-    "dextrose": "400g Dextrose"
+    "dextrose": "400g",
+    "maltodextrin": null
   },
   {
     "name": "St Louis Lager",
@@ -305,7 +325,8 @@
     "original_gravity": "1.041",
     "final_gravity": "1.009",
     "alcohol": "4.30%",
-    "dextrose": "800g Dextrose"
+    "dextrose": "800g",
+    "maltodextrin": null
   },
   {
     "name": "Colorado Lager",
@@ -319,7 +340,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.010",
     "alcohol": "4.80%",
-    "dextrose": "800g Dextrose"
+    "dextrose": "800g",
+    "maltodextrin": null
   },
   {
     "name": "VB Lite",
@@ -333,7 +355,8 @@
     "original_gravity": "1.023",
     "final_gravity": "1.001",
     "alcohol": "2.89%",
-    "dextrose": "1450g Dextrose"
+    "dextrose": "1450g",
+    "maltodextrin": null
   },
   {
     "name": "VB Lite Mid LC",
@@ -347,7 +370,8 @@
     "original_gravity": "1.013",
     "final_gravity": "1.001",
     "alcohol": "2.10%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "MCGVB",
@@ -361,7 +385,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.008",
     "alcohol": "4.80%",
-    "dextrose": "2200g Dextrose"
+    "dextrose": "2200g",
+    "maltodextrin": null
   },
   {
     "name": "Aussie Draught",
@@ -375,7 +400,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.009",
     "alcohol": "4.90%",
-    "dextrose": "1250g Dextrose"
+    "dextrose": "1250g",
+    "maltodextrin": null
   },
   {
     "name": "Swan AU",
@@ -389,7 +415,8 @@
     "original_gravity": "1.033",
     "final_gravity": "1.007",
     "alcohol": "3.50%",
-    "dextrose": "700g Dextrose"
+    "dextrose": "700g",
+    "maltodextrin": null
   },
   {
     "name": "Danish Lager",
@@ -403,7 +430,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.010",
     "alcohol": "4.80%",
-    "dextrose": "1600g Dextrose"
+    "dextrose": "1600g",
+    "maltodextrin": null
   },
   {
     "name": "Grolsch",
@@ -417,7 +445,8 @@
     "original_gravity": "1.044",
     "final_gravity": "1.009",
     "alcohol": "4.70%",
-    "dextrose": "750g Dextrose"
+    "dextrose": "750g",
+    "maltodextrin": null
   },
   {
     "name": "Hynek Dutch Pilsner",
@@ -431,7 +460,8 @@
     "original_gravity": "1.046",
     "final_gravity": "1.009",
     "alcohol": "5.00%",
-    "dextrose": "1100g Dextrose"
+    "dextrose": "1100g",
+    "maltodextrin": null
   },
   {
     "name": "Mexi Lager",
@@ -445,7 +475,8 @@
     "original_gravity": "1.045",
     "final_gravity": "1.010",
     "alcohol": "5.00%",
-    "dextrose": "1000g Dextrose"
+    "dextrose": "1000g",
+    "maltodextrin": null
   },
   {
     "name": "Stynl Lager",
@@ -459,7 +490,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.90%",
-    "dextrose": "600g Dextrose"
+    "dextrose": "600g",
+    "maltodextrin": null
   },
   {
     "name": "Tokyo Gold",
@@ -473,7 +505,8 @@
     "original_gravity": "1.040",
     "final_gravity": "1.008",
     "alcohol": "4.30%",
-    "dextrose": "1500g Dextrose"
+    "dextrose": "1500g",
+    "maltodextrin": null
   },
   {
     "name": "Runningbird Bitter",
@@ -487,7 +520,8 @@
     "original_gravity": "1.043",
     "final_gravity": "1.010",
     "alcohol": "4.40%",
-    "dextrose": "1800g Dextrose"
+    "dextrose": "1800g",
+    "maltodextrin": null
   },
   {
     "name": "Bushchook",
@@ -501,7 +535,8 @@
     "original_gravity": "1.045",
     "final_gravity": "1.009",
     "alcohol": "4.80%",
-    "dextrose": "1900g Dextrose"
+    "dextrose": "1900g",
+    "maltodextrin": null
   },
   {
     "name": "Bushchook Mid",
@@ -515,7 +550,8 @@
     "original_gravity": "1.035",
     "final_gravity": "1.0075",
     "alcohol": "3.50%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Stellar Lager",
@@ -529,7 +565,8 @@
     "original_gravity": "1.045",
     "final_gravity": "1.008",
     "alcohol": "5.00%",
-    "dextrose": "1400g Dextrose"
+    "dextrose": "1400g",
+    "maltodextrin": null
   },
   {
     "name": "Labbat Pils LC",
@@ -543,7 +580,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.010",
     "alcohol": "4.90%",
-    "dextrose": "1900g Dextrose"
+    "dextrose": "1900g",
+    "maltodextrin": null
   },
   {
     "name": "Malaga Mid",
@@ -557,7 +595,8 @@
     "original_gravity": "1.035",
     "final_gravity": "1.011",
     "alcohol": "3.50%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Teds",
@@ -571,7 +610,8 @@
     "original_gravity": "1.035",
     "final_gravity": "0.998",
     "alcohol": "4.59%",
-    "dextrose": "1200g Dextrose"
+    "dextrose": "1200g",
+    "maltodextrin": null
   },
   {
     "name": "Munich Lager",
@@ -585,7 +625,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.80%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Stella Mid",
@@ -599,7 +640,8 @@
     "original_gravity": "1.039",
     "final_gravity": "1.009",
     "alcohol": "4.00%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Swany",
@@ -613,7 +655,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.80%",
-    "dextrose": "1500g Dextrose"
+    "dextrose": "1500g",
+    "maltodextrin": null
   },
   {
     "name": "Four Ages Gold",
@@ -627,7 +670,8 @@
     "original_gravity": "1.034",
     "final_gravity": "1.008",
     "alcohol": "3.50%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "WSTPLC Weihenstephan Pilsner LC",
@@ -641,7 +685,8 @@
     "original_gravity": "1.038",
     "final_gravity": "1.001",
     "alcohol": "4.80%",
-    "dextrose": "1000g Dextrose"
+    "dextrose": "1000g",
+    "maltodextrin": null
   },
   {
     "name": "Hogesgarden Wheat Lager",
@@ -655,7 +700,8 @@
     "original_gravity": "1.048",
     "final_gravity": "1.012",
     "alcohol": "4.90%",
-    "dextrose": "400g Dextrose"
+    "dextrose": "400g",
+    "maltodextrin": null
   },
   {
     "name": "mills chill",
@@ -669,7 +715,8 @@
     "original_gravity": "1.040",
     "final_gravity": "1.010",
     "alcohol": "4.00%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Great Northern Full",
@@ -683,7 +730,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.011",
     "alcohol": "4.90%",
-    "dextrose": "1600g Dextrose"
+    "dextrose": "1600g",
+    "maltodextrin": null
   },
   {
     "name": "Kings",
@@ -697,7 +745,8 @@
     "original_gravity": "1.043",
     "final_gravity": "1.012",
     "alcohol": "4.00%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Toy Draft Lite LC",
@@ -711,7 +760,8 @@
     "original_gravity": "1.020",
     "final_gravity": "1.002",
     "alcohol": "2.35%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Millers",
@@ -725,7 +775,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.010",
     "alcohol": "5.00%",
-    "dextrose": "600g Dextrose"
+    "dextrose": "600g",
+    "maltodextrin": null
   },
   {
     "name": "Mango Lager",
@@ -739,7 +790,8 @@
     "original_gravity": "1.038",
     "final_gravity": "1.001",
     "alcohol": "5.15%",
-    "dextrose": "520g Dextrose"
+    "dextrose": "520g",
+    "maltodextrin": null
   },
   {
     "name": "Pretty Blonde",
@@ -753,7 +805,8 @@
     "original_gravity": "1.038",
     "final_gravity": "1.001",
     "alcohol": "4.80%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Hahn Super Dry",
@@ -767,7 +820,8 @@
     "original_gravity": "1.033",
     "final_gravity": "1.002",
     "alcohol": "4.70%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Crikey Mid",
@@ -781,7 +835,8 @@
     "original_gravity": "1.030",
     "final_gravity": "1.013",
     "alcohol": "2.50%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Blanc",
@@ -795,7 +850,8 @@
     "original_gravity": "1.049",
     "final_gravity": "1.0105",
     "alcohol": "6.80%",
-    "dextrose": "3400g Dextrose"
+    "dextrose": "3400g",
+    "maltodextrin": null
   },
   {
     "name": "Kirin Megumi",
@@ -809,7 +865,8 @@
     "original_gravity": "1.034",
     "final_gravity": "0.998",
     "alcohol": "4.46%",
-    "dextrose": "2900g Dextrose"
+    "dextrose": "2900g",
+    "maltodextrin": null
   },
   {
     "name": "Lefe Blonde",
@@ -823,7 +880,8 @@
     "original_gravity": "1.047",
     "final_gravity": "1.010",
     "alcohol": "5.00%",
-    "dextrose": "6100g Dextrose"
+    "dextrose": "6100g",
+    "maltodextrin": null
   },
   {
     "name": "Pretty Mid",
@@ -837,7 +895,8 @@
     "original_gravity": "1.036",
     "final_gravity": "1.000",
     "alcohol": "4.70%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "BC Mid",
@@ -851,7 +910,8 @@
     "original_gravity": "1.026",
     "final_gravity": "1.0025",
     "alcohol": "3.70%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "HSD Mid",
@@ -865,7 +925,8 @@
     "original_gravity": "1.026",
     "final_gravity": "1.0025",
     "alcohol": "3.70%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Blonde Mid",
@@ -879,7 +940,8 @@
     "original_gravity": "1.028",
     "final_gravity": "1.005",
     "alcohol": "3.50%",
-    "dextrose": "1400g Dextrose"
+    "dextrose": "1400g",
+    "maltodextrin": null
   },
   {
     "name": "Crunch Full",
@@ -893,7 +955,8 @@
     "original_gravity": "1.036",
     "final_gravity": "1.000",
     "alcohol": "4.67%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Hodes Ice Lite",
@@ -907,7 +970,8 @@
     "original_gravity": "1.029",
     "final_gravity": "1.006",
     "alcohol": "3.00%",
-    "dextrose": "350g Dextrose"
+    "dextrose": "350g",
+    "maltodextrin": null
   },
   {
     "name": "Sherbert Sour",
@@ -921,7 +985,8 @@
     "original_gravity": "1.055",
     "final_gravity": "1.088",
     "alcohol": "6.17%",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   },
   {
     "name": "Golden Goose Light",
@@ -935,7 +1000,8 @@
     "original_gravity": "1.033",
     "final_gravity": "1.007",
     "alcohol": "3.50%",
-    "dextrose": "700g Dextrose"
+    "dextrose": "700g",
+    "maltodextrin": null
   },
   {
     "name": "Crunch LC",
@@ -949,7 +1015,8 @@
     "original_gravity": "1.030",
     "final_gravity": "0.997",
     "alcohol": "3.80%",
-    "dextrose": "500g Dextrose"
+    "dextrose": "500g",
+    "maltodextrin": null
   },
   {
     "name": "Japanese SuperDry",
@@ -963,7 +1030,8 @@
     "original_gravity": "1.045",
     "final_gravity": "1.008",
     "alcohol": "4.90%",
-    "dextrose": "1600g Dextrose"
+    "dextrose": "1600g",
+    "maltodextrin": null
   },
   {
     "name": "Japanese SuperDry LC",
@@ -977,6 +1045,7 @@
     "original_gravity": "",
     "final_gravity": "",
     "alcohol": "",
-    "dextrose": null
+    "dextrose": null,
+    "maltodextrin": null
   }
 ]
