@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Beer FRA Calculator</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="page-header">
+
+        <div class="header-copy">
+
+            <div class="eyebrow">
+                BREWERY TOOL
+            </div>
+
+            <h1>
+                🍺 JBC Brewer Recipes
+            </h1>
+
+            <p>
+                Select a recipe and calculate its foam-retention
+                requirement.
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <img
+                src="hops.svg"
+                alt="Cartoon hops"
+                class="header-art"
+            >
+
+            <a
+                href="login.html?logout=1"
+                class="logout-button"
+            >
+                Log out
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <div
+        id="error-message"
+        class="alert error hidden"
+    >
+    </div>
+
+
+    <!-- =====================================================
+         CALCULATOR FORM
+    ====================================================== -->
+
+    <form
+        method="POST"
+        id="calculator-form"
+        onsubmit="return calculateFRA(event)"
+    >
+
+
+        <!-- =================================================
+             RECIPE SELECTION
+        ================================================== -->
+
+        <section class="card recipe-library">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        BREWERY RECIPES
+                    </div>
+
+                    <h2>
+                        Select Recipe
+                    </h2>
+
+                    <p>
+                        Choose a saved recipe or select Custom Recipe
+                        to enter your own FRA ingredients.
+                    </p>
+
+                </div>
+
+
+                <div class="recipe-selector-wrap">
+
+                    <select
+                        id="recipe-selector"
+                        name="selected_recipe"
+                        class="recipe-selector"
+                        required
+                    >
+
+                        <option value="">
+                            Select a recipe...
+                        </option>
+
+                        <option value="__custom__">
+                            Custom Recipe
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Saved recipe information -->
+
+            <div
+                id="recipe-display"
+                class="recipe-display hidden"
+            >
+
+                <div class="recipe-title-row">
+
+                    <div>
+
+                        <h3 id="recipe-title">
+                        </h3>
+
+                        <span
+                            id="recipe-style"
+                            class="recipe-badge"
+                        >
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recipe-stats">
+
+                    <div class="recipe-stat">
+
+                        <span>
+                            Original Gravity
+                        </span>
+
+                        <strong id="recipe-og">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="recipe-stat">
+
+                        <span>
+                            Final Gravity
+                        </span>
+
+                        <strong id="recipe-fg">
+                        </strong>
+
+                    </div>
+
+
+                    <div class="recipe-stat">
+
+                        <span>
+                            Alcohol
+                        </span>
+
+                        <strong id="recipe-abv">
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recipe-columns">
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            🍺 Malt / Fermentables
+                        </h4>
+
+                        <div
+                            id="recipe-fermentables"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            🌾 Grains
+                        </h4>
+
+                        <div
+                            id="recipe-grains"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            🌿 Hops
+                        </h4>
+
+                        <div
+                            id="recipe-hops"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            🧫 Yeast
+                        </h4>
+
+                        <div
+                            id="recipe-yeast"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            ✨ Extras
+                        </h4>
+
+                        <div
+                            id="recipe-extras"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <div class="recipe-column">
+
+                        <h4>
+                            📝 Notes
+                        </h4>
+
+                        <div
+                            id="recipe-notes"
+                            class="recipe-text"
+                        >
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Custom recipe -->
+
+            <div
+                id="custom-settings"
+                class="hidden"
+            >
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="custom_ppm">
+                            Custom Base FRA
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="custom_ppm"
+                                name="custom_ppm"
+                                step="0.1"
+                                min="0.1"
+                                value="50"
+                            >
+
+                            <span>
+                                ppm
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             BATCH SIZE
+        ================================================== -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        BATCH
+                    </div>
+
+                    <h2>
+                        Batch Size
+                    </h2>
+
+                    <p>
+                        Enter the final batch volume.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="batch_size">
+                        Batch Size
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="batch_size"
+                            name="batch_size"
+                            step="0.1"
+                            min="0.1"
+                            value="60"
+                            required
+                        >
+
+                        <span>
+                            L
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INGREDIENTS
+        ================================================== -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="eyebrow">
+                        FOAM ADJUSTMENT
+                    </div>
+
+                    <h2>
+                        FRA Ingredients
+                    </h2>
+
+                    <p id="ingredient-section-description">
+                        Saved recipe ingredients are loaded
+                        automatically. You can adjust them before
+                        calculating.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="button secondary"
+                    onclick="addIngredient()"
+                >
+                    + Add Ingredient
+                </button>
+
+            </div>
+
+
+            <div class="ingredient-header">
+
+                <div>
+                    Ingredient
+                </div>
+
+                <div>
+                    Amount
+                </div>
+
+                <div>
+                    Unit
+                </div>
+
+                <div>
+                    Adjustment
+                </div>
+
+                <div>
+                </div>
+
+            </div>
+
+
+            <div id="ingredient-list">
+            </div>
+
+
+            <div class="ingredient-note">
+
+                <strong>
+                    How the adjustment works
+                </strong>
+
+                <p>
+                    Negative values indicate ingredients expected
+                    to support foam and therefore reduce the FRA
+                    target.
+                </p>
+
+                <p>
+                    Positive values increase the FRA target.
+                </p>
+
+                <p>
+                    Litre-based ingredients are displayed but do not
+                    receive a ppm/kg adjustment because their density
+                    is unknown.
+                </p>
+
+                <p>
+                    The coefficients are working/calibration values,
+                    not universal brewing constants. Calibrate them
+                    against your own beers and FRA product.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CALCULATE
+        ================================================== -->
+
+        <div class="calculate-area">
+
+            <button
+                type="submit"
+                class="button primary calculate-button"
+            >
+                🍺 Calculate FRA Requirement
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+    <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+    <section
+        id="results-card"
+        class="card results-card hidden"
+    >
+
+        <div class="eyebrow">
+            CALCULATION RESULT
+        </div>
+
+        <h2>
+            FRA Requirement
+        </h2>
+
+
+        <div class="result-grid">
+
+
+            <div class="result-box">
+
+                <span class="result-label">
+                    Batch Size
+                </span>
+
+                <strong id="result-batch">
+                </strong>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <span class="result-label">
+                    Base FRA
+                </span>
+
+                <strong id="result-base">
+                </strong>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <span class="result-label">
+                    Recipe Adjustment
+                </span>
+
+                <strong id="result-adjustment">
+                </strong>
+
+            </div>
+
+
+            <div class="result-box highlight">
+
+                <span class="result-label">
+                    Final FRA Target
+                </span>
+
+                <strong id="result-final">
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             ACTUAL WEIGHTS
+        ================================================== -->
+
+        <div class="solution-results">
+
+            <h3>
+                2% FRA Solution
+            </h3>
+
+
+            <div class="solution-grid">
+
+
+                <div class="solution-item">
+
+                    <span>
+                        FRA
+                    </span>
+
+                    <strong id="result-fra">
+                    </strong>
+
+                </div>
+
+
+                <div class="solution-item">
+
+                    <span>
+                        Water
+                    </span>
+
+                    <strong id="result-water">
+                    </strong>
+
+                </div>
+
+
+                <div class="solution-item total">
+
+                    <span>
+                        Total Solution
+                    </span>
+
+                    <strong id="result-total">
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             BREAKDOWN
+        ================================================== -->
+
+        <div class="breakdown">
+
+            <h3>
+                Ingredient Calculation
+            </h3>
+
+
+            <div
+                id="breakdown-table"
+                class="breakdown-table"
+            >
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FORMULA
+        ================================================== -->
+
+        <div class="formula">
+
+            <h3>
+                Calculation
+            </h3>
+
+            <p>
+                Final PPM = Base PPM + Recipe Adjustment
+            </p>
+
+            <p>
+                FRA grams = Batch litres × Final PPM ÷ 1000
+            </p>
+
+            <p>
+                2% solution = FRA ÷ 0.02
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
