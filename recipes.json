@@ -158,9 +158,9 @@
   {
     "name": "Little Animals Pale Ale (LAPA)",
     "style": "Pale Ale",
-    "fermentables": "5L Light Lager, 1L MEQ",
+    "fermentables": "5.5L Light Lager, 1L MEQ",
     "grains": "350g Crystal Malt, 150g Pilsner",
-    "hops": "Black Bowl: 65g Cascade, White Bowl: 65g Cascade, Clear Bowl: 65g Cascade",
+    "hops": "Black Bowl: 65g Chinook, White Bowl: 65g Cascade, Clear Bowl: 65g Cascade",
     "extras": "1 Whirlfloc Tablet, 15g Yeast Nutrient",
     "yeast": "15g US05 Yeast",
     "extra": "",
