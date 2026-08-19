@@ -39,6 +39,22 @@ const ingredientDatabase = {
             "Malt-derived proteins and foam-active material."
     },
 
+    "Wheat Malt Extract": {
+        name: "Wheat Malt Extract",
+        default_unit: "l",
+        adjustment_per_litre: -0.65,
+        description:
+            "Liquid wheat malt extract counted by litre."
+    },
+
+    "Yeast": {
+        name: "Yeast",
+        default_unit: "kg",
+        adjustment_per_kg: -0.50,
+        description:
+            "Yeast solids can provide a small foam-support contribution."
+    },
+
     "Dextrose": {
         name: "Dextrose",
         default_unit: "kg",
@@ -217,7 +233,9 @@ const ingredientAliases = {
     "pilsner malt": "Pilsner Malt",
     "pilsner": "Pilsner",
     "wheat malt": "Wheat Malt",
+    "wheat malt extract": "Wheat Malt Extract",
     "wheat": "Wheat",
+    "yeast": "Yeast",
     "crystal malt": "Crystal Malt",
     "crystal": "Crystal",
     "chocolate malt": "Chocolate Malt",
@@ -883,6 +901,10 @@ function loadRecipeIngredients(
         ),
 
         ...parseIngredientText(
+            recipe.yeast
+        ),
+
+        ...parseIngredientText(
             String(recipe.dextrose || "") + " Dextrose"
         ),
 
@@ -1303,6 +1325,21 @@ function getFactorText(
     }
 
 
+    if (data.adjustment_per_litre !== undefined) {
+
+        const litreFactor =
+            Number(data.adjustment_per_litre);
+
+
+        return (
+            (litreFactor >= 0 ? "+" : "") +
+            litreFactor.toFixed(2) +
+            " ppm/L"
+        );
+
+    }
+
+
     const factor =
         Number(
             data.adjustment_per_kg
@@ -1380,6 +1417,41 @@ function amountToKg(
 }
 
 
+function adjustmentForIngredient(
+    name,
+    amount,
+    unit
+) {
+
+    const data =
+        ingredientDatabase[name];
+
+
+    if (
+        data &&
+        String(unit || "").toLowerCase() === "l" &&
+        data.adjustment_per_litre !== undefined
+    ) {
+
+        return Number(data.adjustment_per_litre) * amount;
+
+    }
+
+
+    const kgAmount =
+        amountToKg(
+            amount,
+            unit
+        );
+
+
+    return kgAmount === null
+        ? 0
+        : kgAmount * Number(data ? data.adjustment_per_kg || 0 : 0);
+
+}
+
+
 /* ============================================================
    CALCULATE RECIPE ADJUSTMENT
 ============================================================ */
@@ -1441,15 +1513,19 @@ function calculateRecipeAdjustment(
                         );
 
                     if (
-                        originalKgAmount !== null
+                        originalKgAmount !== null ||
+                        (
+                            String(ingredient.originalUnit || "").toLowerCase() === "l" &&
+                            originalData &&
+                            originalData.adjustment_per_litre !== undefined
+                        )
                     ) {
 
                         const adjustment =
-                            -originalKgAmount *
-                            Number(
-                                originalData
-                                    ? originalData.adjustment_per_kg
-                                    : 0
+                            -adjustmentForIngredient(
+                                ingredient.originalName,
+                                Number(ingredient.originalAmount),
+                                ingredient.originalUnit
                             );
 
                         totalAdjustment +=
@@ -1528,7 +1604,12 @@ function calculateRecipeAdjustment(
 
 
             if (
-                kgAmount === null
+                kgAmount === null &&
+                !(
+                    unit === "l" &&
+                    data &&
+                    data.adjustment_per_litre !== undefined
+                )
             ) {
 
                 calculationNote =
@@ -1537,53 +1618,14 @@ function calculateRecipeAdjustment(
             } else {
 
                 adjustment =
-                    kgAmount *
-                    adjustmentPerKg;
+                    adjustmentForIngredient(
+                        name,
+                        amount,
+                        unit
+                    );
 
             }
 
-
-            let baselineAdjustment =
-                0;
-
-            if (
-                ingredient.originalName
-            ) {
-
-                const originalData =
-                    ingredientDatabase[
-                        ingredient.originalName
-                    ];
-
-                const originalAmount =
-                    Number(
-                        ingredient.originalAmount
-                    );
-
-                const originalKgAmount =
-                    amountToKg(
-                        originalAmount,
-                        ingredient.originalUnit
-                    );
-
-                if (
-                    originalKgAmount !== null
-                ) {
-
-                    baselineAdjustment =
-                        originalKgAmount *
-                        Number(
-                            originalData
-                                ? originalData.adjustment_per_kg
-                                : 0
-                        );
-
-                }
-
-            }
-
-            adjustment -=
-                baselineAdjustment;
 
             totalAdjustment +=
                 adjustment;
@@ -2016,8 +2058,8 @@ function displayResult(
     document.getElementById(
         "result-water"
     ).textContent =
-        (result.water / 1000.0).toFixed(2) +
-        " L";
+        result.water.toFixed(0) +
+        " ml";
 
 
     displayBreakdown(
@@ -2169,9 +2211,19 @@ function displayBreakdown(
 
 
                 amountCell.textContent =
-                    ingredient.amount.toFixed(3) +
+                    (
+                        Number.isInteger(
+                            ingredient.amount
+                        )
+                            ? ingredient.amount.toFixed(0)
+                            : ingredient.amount.toFixed(3)
+                    ) +
                     " " +
-                    ingredient.unit;
+                            (
+                            ingredient.unit.toLowerCase() === "l"
+                                ? "L"
+                                : ingredient.unit
+                            );
 
 
                 const factorCell =
@@ -2180,12 +2232,26 @@ function displayBreakdown(
                     );
 
 
+                const ingredientData =
+                    ingredientDatabase[
+                        ingredient.name
+                    ];
+
+
+                const isVolumeBased =
+                    ingredient.unit.toLowerCase() === "l" &&
+                    ingredientData &&
+                    ingredientData.adjustment_per_litre !== undefined;
+
+
                 factorCell.textContent =
                     formatSigned(
-                        ingredient.adjustment_per_kg,
+                        isVolumeBased
+                            ? ingredientData.adjustment_per_litre
+                            : ingredient.adjustment_per_kg,
                         2
                     ) +
-                    " ppm/kg";
+                    (isVolumeBased ? " ppm/L" : " ppm/kg");
 
 
                 const adjustmentCell =
