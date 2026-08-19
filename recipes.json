@@ -32,7 +32,7 @@
   {
     "name": "Weizen Weiss Wheat Lager",
     "style": "Wheat Lager",
-    "fermentables": "4L Wheat, 2L MEQ",
+    "fermentables": "4L Wheat Malt Extract, 2L MEQ",
     "grains": "250g Wheat Malt",
     "hops": "Black Bowl: 50g Tettnanger, White Bowl: 20g Tettnanger, Clear Bowl: 50g Hallertau",
     "extras": "1 Whirlfloc Tablet, 15g Yeast Nutrient",
@@ -47,7 +47,7 @@
   {
     "name": "Ginger Beer",
     "style": "Ginger Beer",
-    "fermentables": "3L Ginger, 2L Light Lager, 1L Glucose, 1L Wheat",
+    "fermentables": "3L Ginger, 2L Light Lager, 1L Glucose, 1L Wheat Malt Extract",
     "grains": "",
     "hops": "Black Bowl: 10g Northern Brewer, White Bowl: 10g Northern Brewer, Clear Bowl: 30g Northern Brewer",
     "extras": "1 Whirlfloc Tablet, 20g Yeast Nutrient",
@@ -92,7 +92,7 @@
   {
     "name": "Groot",
     "style": "Ginger Cider",
-    "fermentables": "2L Kerri Ginger, 1L Cider Extract, 1.5L Light Lager, 1.5L Glucose, 0.5L Wheat",
+    "fermentables": "2L Kerri Ginger, 1L Cider Extract, 1.5L Light Lager, 1.5L Glucose, 0.5L Wheat Malt Extract",
     "grains": "",
     "hops": "Black Bowl: 10g Northern Brewer, White Bowl: 10g Northern Brewer, Clear Bowl: 10g Northern Brewer",
     "extras": "1 Whirlfloc Tablet, 20g Yeast Nutrient",
@@ -167,7 +167,7 @@
   {
     "name": "Biggie Juice",
     "style": "Lager",
-    "fermentables": "4L Light Lager, 1.5L Wheat",
+    "fermentables": "4L Light Lager, 1.5L Wheat Malt Extract",
     "grains": "300g Crystal Malt",
     "hops": "Black Bowl: 50g Saaz, 50g Pearl, White Bowl: 50g Saaz, 50g Pearl, Clear Bowl: 100g Amarillo",
     "extras": "1 Whirlfloc Tablet, 15g Yeast Nutrient",
@@ -197,7 +197,7 @@
   {
     "name": "Joondie Kolsch",
     "style": "Kolsch",
-    "fermentables": "4L Light Lager, 1L Wheat",
+    "fermentables": "4L Light Lager, 1L Wheat Malt Extract",
     "grains": "",
     "hops": "Black Bowl: 25g Mittlefrish, White Bowl: 25g Mittlefrish, Clear Bowl: 20g Tettnanger, 20g Mittlefrish, 20g Amarillo",
     "extras": "1 Whirlfloc Tablet, 15g Yeast Nutrient",
@@ -271,7 +271,7 @@
   {
     "name": "Hazy P.A",
     "style": "Hazy Pale Ale",
-    "fermentables": "5L Light Lager, 0.5L Wheat",
+    "fermentables": "5L Light Lager, 0.5L Wheat Malt Extract",
     "grains": "1000g Oats, 500g Pilsner",
     "hops": "Black Bowl: 30g Magnum, White Bowl: 20g Cluster, 30g Galaxy, Clear Bowl: 30g Galaxy, 50g Amarillo",
     "extras": "20g Yeast Nutrient",
@@ -691,7 +691,7 @@
   {
     "name": "Hogesgarden Wheat Lager",
     "style": "Wheat Lager",
-    "fermentables": "6.5L Wheat",
+    "fermentables": "6.5L Wheat Malt Extract",
     "grains": "300g Wheat Malt, 300g Oats",
     "hops": "Black Bowl: 25g Goldings, White Bowl: 20g Goldings, Clear Bowl: 30g Saaz",
     "extras": "1 Whirlfloc Tablet, 15g Yeast Nutrient",
@@ -826,7 +826,7 @@
   {
     "name": "Crikey Mid",
     "style": "Mid Strength Wheat Lager",
-    "fermentables": "3L Wheat, 3.5L Extra Light Lager",
+    "fermentables": "3L Wheat Malt Extract, 3.5L Extra Light Lager",
     "grains": "150g Crystal",
     "hops": "Black Bowl: 110g Hallertau, White Bowl: 20g Hallertau, Clear Bowl: 65g Saaz",
     "extras": "1 Whirlfloc Tablet, 20g Yeast Nutrient",
@@ -841,7 +841,7 @@
   {
     "name": "Blanc",
     "style": "Wheat Beer",
-    "fermentables": "3L Wheat, 3.5L Extra Light Lager",
+    "fermentables": "3L Wheat Malt Extract, 3.5L Extra Light Lager",
     "grains": "250g Pilsner, 150g Wheat",
     "hops": "Black Bowl: 35g Hersbrucker, 100g Tettnanger, White Bowl: 50g Hersbrucker, Green Bowl: 50g Sweet Orange Peel, Clear Bowl: 10g Hersbrucker, 50g Coriander",
     "extras": "1 Whirlfloc Tablet, 20g Yeast Nutrient",
@@ -976,7 +976,7 @@
   {
     "name": "Sherbert Sour",
     "style": "Sour",
-    "fermentables": "3L Wheat, 2.5L Light Lager, 4L Glucose",
+    "fermentables": "3L Wheat Malt Extract, 2.5L Light Lager, 4L Glucose",
     "grains": "",
     "hops": "Black Bowl: 10g Cascade, White Bowl: 10g Cascade, Clear Bowl: 20g Lemondrop",
     "extras": "1 Whirlfloc Tablet, 20g Yeast Nutrient",
