@@ -683,39 +683,69 @@ function showRecipe(
     document.getElementById(
         "recipe-fermentables"
     ).textContent =
-        recipe.fermentables || "N/A";
+        String(
+            recipe.fermentables || "N/A"
+        ).replace(
+            /,\s+/g,
+            "\n"
+        );
 
 
     document.getElementById(
         "recipe-grains"
     ).textContent =
-        recipe.grains || "N/A";
+        String(
+            recipe.grains || "N/A"
+        ).replace(
+            /,\s+/g,
+            "\n"
+        );
 
 
     document.getElementById(
         "recipe-hops"
     ).textContent =
-        recipe.hops || "N/A";
+        String(
+            recipe.hops || "N/A"
+        ).replace(
+            /,\s+(?=(?:Black|White|Clear) Bowl:)/g,
+            "\n"
+        );
 
 
     document.getElementById(
         "recipe-yeast"
     ).textContent =
-        recipe.yeast || "N/A";
+        String(
+            recipe.yeast || "N/A"
+        ).replace(
+            /,\s+/g,
+            "\n"
+        );
 
 
     document.getElementById(
         "recipe-extras"
     ).textContent =
-        recipe.extras || "N/A";
+        String(
+            recipe.extras || "N/A"
+        ).replace(
+            /,\s+/g,
+            "\n"
+        );
 
 
     document.getElementById(
         "recipe-notes"
     ).textContent =
-        recipe.extra ||
-        recipe.notes ||
-        "N/A";
+        String(
+            recipe.extra ||
+            recipe.notes ||
+            "N/A"
+        ).replace(
+            /,\s+/g,
+            "\n"
+        );
 
 
     display.classList.remove(
