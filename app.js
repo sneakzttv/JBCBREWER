@@ -1035,6 +1035,15 @@ function buildIngredientRow(
         row.dataset.recipeIngredient =
             "true";
 
+        row.dataset.originalName =
+            name;
+
+        row.dataset.originalAmount =
+            amount;
+
+        row.dataset.originalUnit =
+            unit;
+
     }
 
 
@@ -1103,7 +1112,7 @@ function buildIngredientRow(
 
 
     amountInput.step =
-        "0.001";
+        "0.1";
 
 
     amountInput.value =
@@ -1386,7 +1395,6 @@ function calculateRecipeAdjustment(
     const ingredientBreakdown =
         [];
 
-
     recipe.forEach(
         function(ingredient) {
 
@@ -1401,6 +1409,11 @@ function calculateRecipeAdjustment(
                     ingredient.amount
                 );
 
+            const unit =
+                String(
+                    ingredient.unit || "kg"
+                ).toLowerCase();
+
 
             if (
                 !Number.isFinite(
@@ -1409,15 +1422,80 @@ function calculateRecipeAdjustment(
                 amount <= 0
             ) {
 
+                if (
+                    ingredient.originalName &&
+                    amount === 0
+                ) {
+
+                    const originalData =
+                        ingredientDatabase[
+                            ingredient.originalName
+                        ];
+
+                    const originalKgAmount =
+                        amountToKg(
+                            Number(
+                                ingredient.originalAmount
+                            ),
+                            ingredient.originalUnit
+                        );
+
+                    if (
+                        originalKgAmount !== null
+                    ) {
+
+                        const adjustment =
+                            -originalKgAmount *
+                            Number(
+                                originalData
+                                    ? originalData.adjustment_per_kg
+                                    : 0
+                            );
+
+                        totalAdjustment +=
+                            adjustment;
+
+                        if (
+                            Math.abs(adjustment) < 0.000001
+                        ) {
+
+                        }
+
+                        ingredientBreakdown.push({
+
+                            name: name,
+
+                            amount: amount,
+
+                            unit: unit,
+
+                            kg_amount: null,
+
+                            adjustment_per_kg:
+                                Number(
+                                    originalData
+                                        ? originalData.adjustment_per_kg
+                                        : 0
+                                ),
+
+                            adjustment: adjustment,
+
+                            calculation_note:
+                                "Original recipe ingredient removed"
+
+                        });
+
+                    } else if (
+                        ingredient.originalName
+                    ) {
+
+                    }
+
+                }
+
                 return;
 
             }
-
-
-            const unit =
-                String(
-                    ingredient.unit || "kg"
-                ).toLowerCase();
 
 
             const data =
@@ -1465,8 +1543,82 @@ function calculateRecipeAdjustment(
             }
 
 
+            let baselineAdjustment =
+                0;
+
+            if (
+                ingredient.originalName
+            ) {
+
+                const originalData =
+                    ingredientDatabase[
+                        ingredient.originalName
+                    ];
+
+                const originalAmount =
+                    Number(
+                        ingredient.originalAmount
+                    );
+
+                const originalKgAmount =
+                    amountToKg(
+                        originalAmount,
+                        ingredient.originalUnit
+                    );
+
+                if (
+                    originalKgAmount !== null
+                ) {
+
+                    baselineAdjustment =
+                        originalKgAmount *
+                        Number(
+                            originalData
+                                ? originalData.adjustment_per_kg
+                                : 0
+                        );
+
+                }
+
+            }
+
+            adjustment -=
+                baselineAdjustment;
+
             totalAdjustment +=
                 adjustment;
+
+            const wasEdited =
+                ingredient.originalName &&
+                (
+                    name !== ingredient.originalName ||
+                    amount !== Number(
+                        ingredient.originalAmount
+                    ) ||
+                    unit !== String(
+                        ingredient.originalUnit || ""
+                    ).toLowerCase()
+                );
+
+            if (
+                wasEdited &&
+                Math.abs(adjustment) < 0.000001
+            ) {
+
+                calculationNote =
+                    "Edited ingredient does not change PPM";
+
+            }
+
+            if (
+                ingredient.originalName &&
+                !wasEdited &&
+                Math.abs(adjustment) < 0.000001
+            ) {
+
+                return;
+
+            }
 
 
             ingredientBreakdown.push({
@@ -1485,7 +1637,10 @@ function calculateRecipeAdjustment(
                 adjustment: adjustment,
 
                 calculation_note:
-                    calculationNote
+                    calculationNote,
+
+                originalName:
+                    ingredient.originalName || ""
 
             });
 
@@ -1620,15 +1775,6 @@ function calculateFRA(
         rows.forEach(
             function(row) {
 
-                if (
-                    row.dataset.recipeIngredient ===
-                    "true"
-                ) {
-
-                    return;
-
-                }
-
                 const name =
                     row.querySelector(
                         ".ingredient-name"
@@ -1672,7 +1818,16 @@ function calculateFRA(
 
                     amount: amount,
 
-                    unit: unit
+                    unit: unit,
+
+                    originalName:
+                        row.dataset.originalName || "",
+
+                    originalAmount:
+                        row.dataset.originalAmount || "",
+
+                    originalUnit:
+                        row.dataset.originalUnit || ""
 
                 });
 
@@ -1865,13 +2020,6 @@ function displayResult(
         " L";
 
 
-    document.getElementById(
-        "result-total"
-    ).textContent =
-        (result.total / 1000.0).toFixed(2) +
-        " L";
-
-
     displayBreakdown(
         result.ingredients,
         result.adjustment
@@ -1930,7 +2078,6 @@ function displayBreakdown(
     table.appendChild(
         heading
     );
-
 
     if (
         ingredients.length === 0
