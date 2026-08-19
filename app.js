@@ -508,11 +508,25 @@ function updateRecipeFRAAmount(
         );
 
 
+    const fraGrams =
+        batchSize *
+        basePPM /
+        1000.0;
+
+
+    const waterMl =
+        fraGrams /
+        0.02 -
+        fraGrams;
+
+
     element.textContent =
+        fraGrams.toFixed(2) +
+        " g / " +
+        waterMl.toFixed(0) +
+        " ml water\n" +
         basePPM.toFixed(1) +
-        " ppm / " +
-        (batchSize * basePPM / 1000.0).toFixed(2) +
-        " g";
+        " ppm";
 
 }
 

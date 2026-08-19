@@ -1096,6 +1096,8 @@ select:focus {
 
     display: block;
 
+    white-space: pre-line;
+
     margin-top: 4px;
 
     color: var(--amber-light);
