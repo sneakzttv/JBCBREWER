@@ -563,6 +563,39 @@ function basePPMForRecipe(recipe) {
 }
 
 
+function recipeIngredientsForFRA(recipe) {
+
+    return [
+
+        ...parseIngredientText(
+            recipe.fermentables
+        ),
+
+        ...parseIngredientText(
+            recipe.grains
+        ),
+
+        ...parseIngredientText(
+            recipe.yeast
+        ),
+
+        ...parseIngredientText(
+            String(recipe.dextrose || "") + " Dextrose"
+        ),
+
+        ...parseIngredientText(
+            String(recipe.maltodextrin || "") + " Maltodextrin"
+        ),
+
+        ...parseHopText(
+            recipe.hops
+        )
+
+    ];
+
+}
+
+
 function updateRecipeFRAAmount(
     recipe
 ) {
@@ -598,9 +631,24 @@ function updateRecipeFRAAmount(
         );
 
 
+    const adjustment =
+        calculateRecipeAdjustment(
+            recipeIngredientsForFRA(
+                recipe
+            )
+        ).totalAdjustment;
+
+
+    const finalPPM =
+        Math.max(
+            basePPM + adjustment,
+            0.1
+        );
+
+
     const fraGrams =
         batchSize *
-        basePPM /
+        finalPPM /
         1000.0;
 
 
@@ -615,7 +663,7 @@ function updateRecipeFRAAmount(
         " g / " +
         waterMl.toFixed(0) +
         " ml water\n" +
-        basePPM.toFixed(1) +
+        finalPPM.toFixed(1) +
         " ppm";
 
 }
@@ -1024,33 +1072,10 @@ function loadRecipeIngredients(
     list.innerHTML = "";
 
 
-    const ingredients = [
-
-        ...parseIngredientText(
-            recipe.fermentables
-        ),
-
-        ...parseIngredientText(
-            recipe.grains
-        ),
-
-        ...parseIngredientText(
-            recipe.yeast
-        ),
-
-        ...parseIngredientText(
-            String(recipe.dextrose || "") + " Dextrose"
-        ),
-
-        ...parseIngredientText(
-            String(recipe.maltodextrin || "") + " Maltodextrin"
-        ),
-
-        ...parseHopText(
-            recipe.hops
-        )
-
-    ];
+    const ingredients =
+        recipeIngredientsForFRA(
+            recipe
+        );
 
 
     ingredients.forEach(
