@@ -54,6 +54,13 @@ const ingredientDatabase = {
         description:
             "Fermentable sugar with little direct foam-positive protein."
     },
+        "Hops": {
+            name: "Hops",
+            default_unit: "g",
+            adjustment_per_kg: 0.00,
+            description:
+                "Recipe hop additions displayed without a foam adjustment."
+        },
 
     "Maltodextrin": {
         name: "Maltodextrin",
@@ -202,6 +209,7 @@ const ingredientAliases = {
 
     "glucose": "Glucose",
     "dextrose": "Dextrose",
+    "hops": "Hops",
     "maltodextrin": "Maltodextrin",
     "malto dextrine": "Malto dextrine",
     "rolled oats": "Rolled Oats",
@@ -447,6 +455,50 @@ function basePPMForRecipe(recipe) {
 }
 
 
+function updateRecipeFRAAmount(
+    recipe
+) {
+
+    const element =
+        document.getElementById(
+            "recipe-base-fra"
+        );
+
+
+    const batchSize =
+        Number(
+            document.getElementById(
+                "batch_size"
+            ).value
+        );
+
+
+    if (
+        !element ||
+        !Number.isFinite(batchSize) ||
+        batchSize <= 0
+    ) {
+
+        return;
+
+    }
+
+
+    const basePPM =
+        basePPMForRecipe(
+            recipe
+        );
+
+
+    element.textContent =
+        basePPM.toFixed(1) +
+        " ppm / " +
+        (batchSize * basePPM / 1000.0).toFixed(2) +
+        " g";
+
+}
+
+
 /* ============================================================
    SHOW RECIPE
 ============================================================ */
@@ -567,6 +619,11 @@ function showRecipe(
         recipe.alcohol || "N/A";
 
 
+    updateRecipeFRAAmount(
+        recipe
+    );
+
+
     /* =================================================
        DEXTROSE
     ================================================== */
@@ -638,6 +695,7 @@ function showRecipe(
 
         description.textContent =
             "Recognized fermentables and grains were loaded automatically. You can adjust them before calculating.";
+                "Recognized fermentables, grains, dextrose, and hops were loaded automatically. You can adjust them before calculating.";
 
     }
 
@@ -652,6 +710,38 @@ function showRecipe(
 
 }
 
+
+function parseHopText(
+    text
+) {
+
+    const totalGrams =
+        Array.from(
+            String(text || "").matchAll(
+                /(\d+(?:\.\d+)?)\s*g\s+[^,]+/gi
+            )
+        ).reduce(
+            function(total, match) {
+
+                return total + Number(match[1]);
+
+            },
+            0
+        );
+
+
+    if (totalGrams === 0) {
+        return [];
+    }
+
+
+    return [{
+        name: "Hops",
+        amount: totalGrams,
+        unit: "g"
+    }];
+
+}
 
 /* ============================================================
    PARSE INGREDIENTS
@@ -790,6 +880,18 @@ function loadRecipeIngredients(
 
         ...parseIngredientText(
             recipe.grains
+        ),
+
+        ...parseIngredientText(
+            String(recipe.dextrose || "") + " Dextrose"
+        ),
+
+        ...parseIngredientText(
+            String(recipe.maltodextrin || "") + " Maltodextrin"
+        ),
+
+        ...parseHopText(
+            recipe.hops
         )
 
     ];
@@ -799,7 +901,10 @@ function loadRecipeIngredients(
         function(ingredient) {
 
             addIngredient(
-                ingredient
+                {
+                    ...ingredient,
+                    recipeIngredient: true
+                }
             );
 
         }
@@ -921,6 +1026,16 @@ function buildIngredientRow(
 
     row.className =
         "ingredient-row";
+
+
+    if (
+        ingredient.recipeIngredient
+    ) {
+
+        row.dataset.recipeIngredient =
+            "true";
+
+    }
 
 
     /* Ingredient */
@@ -1505,6 +1620,15 @@ function calculateFRA(
         rows.forEach(
             function(row) {
 
+                if (
+                    row.dataset.recipeIngredient ===
+                    "true"
+                ) {
+
+                    return;
+
+                }
+
                 const name =
                     row.querySelector(
                         ".ingredient-name"
@@ -1737,15 +1861,15 @@ function displayResult(
     document.getElementById(
         "result-water"
     ).textContent =
-        result.water.toFixed(2) +
-        " g";
+        (result.water / 1000.0).toFixed(2) +
+        " L";
 
 
     document.getElementById(
         "result-total"
     ).textContent =
-        result.total.toFixed(2) +
-        " g";
+        (result.total / 1000.0).toFixed(2) +
+        " L";
 
 
     displayBreakdown(
@@ -1825,7 +1949,7 @@ function displayBreakdown(
         empty.innerHTML = `
 
             <div>
-                No recognized FRA ingredients were entered.
+                No extra FRA ingredients were added. The recipe FRA was used.
             </div>
 
             <div></div>
@@ -2099,6 +2223,42 @@ function initialiseCalculator() {
         document.getElementById(
             "recipe-selector"
         );
+
+
+    const batchInput =
+        document.getElementById(
+            "batch_size"
+        );
+
+
+    if (
+        batchInput
+    ) {
+
+        batchInput.addEventListener(
+            "input",
+            function() {
+
+                const selectedRecipe =
+                    recipeDatabase[
+                        selector.value
+                    ];
+
+
+                if (
+                    selectedRecipe
+                ) {
+
+                    updateRecipeFRAAmount(
+                        selectedRecipe
+                    );
+
+                }
+
+            }
+        );
+
+    }
 
 
     /*
