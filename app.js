@@ -47,6 +47,86 @@ const ingredientDatabase = {
             "Liquid wheat malt extract counted by litre."
     },
 
+    "Cider Extract": {
+        name: "Cider Extract",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid extract counted by litre."
+    },
+
+    "Light Lager": {
+        name: "Light Lager",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "Extra Light Lager": {
+        name: "Extra Light Lager",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "Edme Light Lager": {
+        name: "Edme Light Lager",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "MEQ": {
+        name: "MEQ",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "Amber": {
+        name: "Amber",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "Dark Ale": {
+        name: "Dark Ale",
+        default_unit: "l",
+        adjustment_per_litre: -0.50,
+        description:
+            "Liquid malt extract counted by litre."
+    },
+
+    "Ginger": {
+        name: "Ginger",
+        default_unit: "l",
+        adjustment_per_litre: 0.00,
+        description:
+            "Liquid adjunct counted by litre."
+    },
+
+    "Kerri Ginger": {
+        name: "Kerri Ginger",
+        default_unit: "l",
+        adjustment_per_litre: 0.00,
+        description:
+            "Liquid adjunct counted by litre."
+    },
+
+    "Mango Nectar": {
+        name: "Mango Nectar",
+        default_unit: "l",
+        adjustment_per_litre: 0.00,
+        description:
+            "Liquid adjunct counted by litre."
+    },
+
     "Yeast": {
         name: "Yeast",
         default_unit: "kg",
@@ -234,6 +314,16 @@ const ingredientAliases = {
     "pilsner": "Pilsner",
     "wheat malt": "Wheat Malt",
     "wheat malt extract": "Wheat Malt Extract",
+    "cider extract": "Cider Extract",
+    "light lager": "Light Lager",
+    "extra light lager": "Extra Light Lager",
+    "edme light lager": "Edme Light Lager",
+    "meq": "MEQ",
+    "amber": "Amber",
+    "dark ale": "Dark Ale",
+    "kerri ginger": "Kerri Ginger",
+    "mango nectar": "Mango Nectar",
+    "ginger": "Ginger",
     "wheat": "Wheat",
     "yeast": "Yeast",
     "crystal malt": "Crystal Malt",
