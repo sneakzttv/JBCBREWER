@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Light Lager",
+        "price-per-kg": "$2.97",
+        "price-per-litre": "$4.46"
+    },
+    {
+        "name": "Extra Light Lager",
+        "price-per-kg": "$3.15", 
+        "price-per-litre": "$4.65"
+    },
+    {
+        "name": "Wheat Malt",
+        "price-per-kg": "$2.98",
+        "price-per-litre": "$4.47"
+    },
+    {
+        "name": "Amber Malt (MEQ)",
+        "price-per-kg": "$2.85",
+        "price-per-litre": "$4.28"
+    },
+    {
+        "name": "Glucose",
+        "price-per-kg": "$1.41",
+        "price-per-litre": "$2.12"
+    },
+    {
+        "name": "Dark Malt",
+        "price-per-kg": "$3.01",
+        "price-per-litre": "$4.52"
+    },
+    {
+        "name": "Stout Malt",
+        "price-per-kg": "$5.25",
+        "price-per-litre": "$7.35"
+    },
+    {
+        "name": "Sorghum Malt",
+        "price-per-kg": "$6.50",
+        "price-per-litre": "$8.78"
+    },
+    {
+        "name": "Ginger Extract",
+        "price-per-kg": "$12.70",
+        "price-per-litre": "$12.70"
+    },
+    {
+        "name": "Cider Concentrate",
+        "price-per-kg": "$13.30",
+        "price-per-litre": "$13.30"
+    }, 
+    {
+        "name": "Dextrose",
+        "price-per-kg": "$1.35",
+        "price-per-litre": "$1.35"
+    }
+]
